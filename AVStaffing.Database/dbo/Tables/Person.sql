@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[Person] (
+    [Id]                       INT           IDENTITY (1, 1) NOT NULL,
+    [FirstName]                NVARCHAR (50) NOT NULL,
+    [LastName]                 NVARCHAR (50) NOT NULL,
+    [SIN]                      NVARCHAR (50) NOT NULL,
+    [DateOfBirth]              DATE          NULL,
+    [Email]                    NVARCHAR (50) NOT NULL,
+    [Address]                  NVARCHAR (50) NOT NULL,
+    [City]                     NVARCHAR (50) NOT NULL,
+    [PostalCode]               NVARCHAR (50) NOT NULL,
+    [HomePhone]                NVARCHAR (50) NOT NULL,
+    [Gender]                   NVARCHAR (50) NOT NULL,
+    [CellPhone]                NVARCHAR (50) NOT NULL,
+    [FullTimeStudent]          NVARCHAR (50) NOT NULL,
+    [HasWorkPermit]            BIT           NOT NULL,
+    [DriverLicence]            NVARCHAR (50) NOT NULL,
+    [PermanentResidence]       NVARCHAR (50) NOT NULL,
+    [CANCitizen]               NVARCHAR (50) NOT NULL,
+    [CriminalOffense]          NVARCHAR (50) NOT NULL,
+    [PositionType]             NVARCHAR (50) NOT NULL,
+    [EmploymentStatus]         NVARCHAR (50) NOT NULL,
+    [AvailableDate]            DATE          NULL,
+    [JobType]                  NVARCHAR (50) NOT NULL,
+    [Education]                NVARCHAR (50) NOT NULL,
+    [IsLegallyAllowedInCanada] NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

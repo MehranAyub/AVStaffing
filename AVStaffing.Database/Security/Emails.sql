@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Emails]
+    AUTHORIZATION [dbo];
+
