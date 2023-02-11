@@ -7,487 +7,868 @@
 @using AVStaffing.LocalResource.Home.Index
 
 @{
-    Layout = "~/Views/Shared/_WebBaseLayout.cshtml";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
 
     ViewBag.Title = "Home Page";
     var homePage = new ApplicationDbContext().Pages.FirstOrDefault(x => x.Route == "home");
 
 }
-<style>
-    form.search-box .search-form {
-        width: 25%;
-    }
-</style>
 
 
-@*@Html.Raw(homePage.Content)*@
+<div id="slider_wrapper">
+    <div class="container">
+        <div id="slider_inner">
+            <div class="">
+                <div id="slider">
 
+                    <div class="">
+                        <div class="carousel-box">
+                            <div class="inner">
+                                <div class="carousel main">
+                                    <ul>
+                                        <li>
+                                            <div class="slider">
+                                                <div class="slider_inner">
+                                                    <div class="txt1"><span>Welcome To Our</span></div>
+                                                    <div class="txt2"><span>TRAVEL AGENCY</span></div>
+                                                    <div class="txt3"><span>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod.</span></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="slider">
+                                                <div class="slider_inner">
+                                                    <div class="txt1"><span>7 - Day Tour</span></div>
+                                                    <div class="txt2"><span>AMAZING CARIBBEAN</span></div>
+                                                    <div class="txt3"><span>Lorem ipsum dolor eleifend option congue nihil imperdiet doming id quod.</span></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="slider">
+                                                <div class="slider_inner">
+                                                    <div class="txt1"><span>5 Days In</span></div>
+                                                    <div class="txt2"><span>PARIS (Capital Of World)</span></div>
+                                                    <div class="txt3"><span>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod.</span></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="slider">
+                                                <div class="slider_inner">
+                                                    <div class="txt1"><span>12 - Day Cruises</span></div>
+                                                    <div class="txt2"><span>FROM GREECE TO SPAIN</span></div>
+                                                    <div class="txt3"><span>MEDITERRANEAN - 12 - Day Cruises By "GRAND VICTORIA III" Cruise Liner.</span></div>
 
-<!-- slider Area Start-->
-<div class="slider-area ">
-    <!-- Mobile Menu -->
-    <div class="slider-active">
-        <div class="single-slider slider-height d-flex align-items-center" data-background="@Url.Content("~/Theme/assets/img/hero/h1_hero.jpg")">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-9 col-md-10">
-                        <div class="hero__caption">
-                            <h1 style="font-size:32px;margin-bottom:0px">
-                                We help build people’s dream jobs here..
-                                We actually “listen” to our
-                                Employees and Employers!
+                                                </div>
+                                            </div>
+                                        </li>
 
-                            </h1>
-                            <h1 style="color: #CD6D19; font-size: 32px; margin-bottom: 0px">
-                                The Right Job,
-                                The Right Candidate,
-                                The Right Place.
-                            </h1>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="slider_pagination"></div>
                 </div>
-                <!-- Search Box -->
-                <div class="row" style="margin-top:10px">
-                    <div class="col-xl-8">
-                        <!-- form -->
-                        <form action="#" class="search-box" style="box-shadow:none">
+            </div>
+        </div>
+    </div>
+</div>
 
-                            <div class="search-form">
-                                @*<a id="jobFormBtn">Looking for a Job</a>*@
-                                <button style="height: 70px; background: #CD6D19;cursor:pointer; border:none" id="jobFormBtn">Looking for a Job</button>
+<div id="front_tabs">
+    <div class="container">
+        <div class="tabs_wrapper tabs1_wrapper">
+            <div class="tabs tabs1">
+                <div class="tabs_tabs tabs1_tabs">
+
+                    <ul>
+                        <li class="active flights"><a href="#tabs-1">Flights</a></li>
+                        <li class="hotels"><a href="#tabs-2">Hotels</a></li>
+                        <li class="cars"><a href="#tabs-3">Cars</a></li>
+                        <li class="cruises"><a href="#tabs-4">Cruises</a></li>
+                    </ul>
+
+                </div>
+                <div class="tabs_content tabs1_content">
+
+                    <div id="tabs-1">
+                        <form action="javascript:;" class="form1">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>Flying from:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">City or Airport</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>To:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">City or Airport</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>Departing:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="Mm/Dd/Yy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>Returning:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="Mm/Dd/Yy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-1">
+                                    <div class="select1_wrapper">
+                                        <label>Adult:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select select3" style="width: 100%">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-1">
+                                    <div class="select1_wrapper">
+                                        <label>Child:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select select3" style="width: 100%">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="button1_wrapper">
+                                        <button type="submit" class="btn-default btn-form1-submit">Search</button>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="search-form">
-                                @*<a href="@Url.Action("Contact", "Home")">Looking to hire</a>*@
-                                <button type="button" style="height: 70px; color:white;background: #CD6D19;cursor:pointer ;border:none" onclick='window.location="@Url.Action("Contact", "Home")"'>Looking For Hiring</button>
-
-                            </div>
-
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- slider Area End-->
-<!-- Our Services Start -->
-<div class="our-services section-pad-t30">
-    <div class="container">
-        <!-- Section Tittle -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle text-center">
-                    <span>FEATURED TOURS Packages</span>
-                    <h2>Browse Top Categories </h2>
-                </div>
-            </div>
-        </div>
-        <div class="row d-flex justify-contnet-center">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="single-services text-center mb-30">
-                    <div class="services-ion">
-                        <span class="flaticon-tour"></span>
-                    </div>
-                    <div class="services-cap">
-                        <h5><a href="job_listing.html">General Labour</a></h5>
-                        <span>(35)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="single-services text-center mb-30">
-                    <div class="services-ion">
-                        <span class="flaticon-cms"></span>
-                    </div>
-                    <div class="services-cap">
-                        <h5><a href="job_listing.html">Project Manager</a></h5>
-                        <span>(10)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="single-services text-center mb-30">
-                    <div class="services-ion">
-                        <span class="flaticon-report"></span>
-                    </div>
-                    <div class="services-cap">
-                        <h5><a href="job_listing.html">Forklift Operators</a></h5>
-                        <span>(26)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="single-services text-center mb-30">
-                    <div class="services-ion">
-                        <span class="flaticon-app"></span>
-                    </div>
-                    <div class="services-cap">
-                        <h5><a href="job_listing.html">Supervisor</a></h5>
-                        <span>(30)</span>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-        <!-- More Btn -->
-        <!-- Section Button -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="browse-btn2 text-center mt-50">
-                    <a href="@Url.Action("Services", "Home")" class="border-btn2">Browse All Sectors</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Our Services End -->
-<!-- Online CV Area Start -->
-<div class="online-cv cv-bg section-overly pt-90 pb-120" data-background="@Url.Content("~/Theme/assets/img/gallery/cv_bg.jpg")">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-10">
-                <div class="cv-caption text-center">
-                    <p class="pera1">FEATURED TOURS Packages</p>
-                    <p class="pera2"> Make a Difference with Your Online Resume!</p>
-                    <a href="#" class="border-btn2 border-btn4">Upload your cv</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Online CV Area End-->
-<!-- Featured_job_start -->
-<section class="featured-job-area feature-padding">
-    <div class="container">
-        <!-- Section Tittle -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle text-center">
-                    <span>Recent Job</span>
-                    <h2>Featured Jobs</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xl-10">
-                <!-- single-job-content -->
-                <div class="single-job-items mb-30">
-                    <div class="job-items">
-                        <div class="company-img">
-                            <a href="#"><img src="@Url.Content("~/Theme/assets/img/icon/job-list1.png")" alt=""></a>
-                        </div>
-                        <div class="job-tittle">
-                            <a href="#"><h4>Bakers</h4></a>
-                            <ul>
-                                <li>Creative Agency</li>
-                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                <li>$3500 - $4000</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="items-link f-right">
-                        <a href="#">Full Time</a>
-                        <span>7 hours ago</span>
-                    </div>
-                </div>
-                <!-- single-job-content -->
-                <div class="single-job-items mb-30">
-                    <div class="job-items">
-                        <div class="company-img">
-                            <a href="#"><img src="@Url.Content("~/Theme/assets/img/icon/job-list2.png")" alt=""></a>
-                        </div>
-                        <div class="job-tittle">
-                            <a href="#"><h4>Handyman</h4></a>
-                            <ul>
-                                <li>Creative Agency</li>
-                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                <li>$3500 - $4000</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="items-link f-right">
-                        <a href="#">Full Time</a>
-                        <span>11 hours ago</span>
-                    </div>
-                </div>
-                <!-- single-job-content -->
-                <div class="single-job-items mb-30">
-                    <div class="job-items">
-                        <div class="company-img">
-                            <a href="#"><img src="@Url.Content("~/Theme/assets/img/icon/job-list3.png")" alt=""></a>
-                        </div>
-                        <div class="job-tittle">
-                            <a href="#"><h4>Plumber/ Electrician</h4></a>
-                            <ul>
-                                <li>Creative Agency</li>
-                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                <li>$3500 - $4000</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="items-link f-right">
-                        <a href="#">Full Time</a>
-                        <span>13 hours ago</span>
-                    </div>
-                </div>
-                <!-- single-job-content -->
-                <div class="single-job-items mb-30">
-                    <div class="job-items">
-                        <div class="company-img">
-                            <a href="#"><img src="@Url.Content("~/Theme/assets/img/icon/job-list4.png")" alt=""></a>
-                        </div>
-                        <div class="job-tittle">
-                            <a href="#"><h4>Supervisor</h4></a>
-                            <ul>
-                                <li>Creative Agency</li>
-                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                <li>$3500 - $4000</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="items-link f-right">
-                        <a href="#">Full Time</a>
-                        <span>7 hours ago</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Featured_job_end -->
-<!-- How  Apply Process Start-->
-<div class="apply-process-area apply-bg pt-150 pb-150" data-background="@Url.Content("~/Theme/assets/img/gallery/how-applybg.png")">
-    <div class="container">
-        <!-- Section Tittle -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle white-text text-center">
-                    <span>Apply process</span>
-                    <h2> How it works</h2>
-                </div>
-            </div>
-        </div>
-        <!-- Apply Process Caption -->
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-process text-center mb-30">
-                    <div class="process-ion">
-                        <span class="flaticon-search"></span>
-                    </div>
-                    <div class="process-cap">
-                        <h5>1. Search a job</h5>
-                        <p>Search your appropriate job with matching skills from our portal .</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-process text-center mb-30">
-                    <div class="process-ion">
-                        <span class="flaticon-curriculum-vitae"></span>
-                    </div>
-                    <div class="process-cap">
-                        <h5>2. Apply for job</h5>
-                        <p>Apply for selected and matched job with your skills by uploading your Resume.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-process text-center mb-30">
-                    <div class="process-ion">
-                        <span class="flaticon-tour"></span>
-                    </div>
-                    <div class="process-cap">
-                        <h5>3. Get your job</h5>
-                        <p>Wait for our response after applying and get Job if you meet criteria.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- How  Apply Process End-->
-<!-- Testimonial Start -->
-<div class="testimonial-area testimonial-padding">
-    <div class="container">
-        <!-- Testimonial contents -->
-        <div class="row d-flex justify-content-center">
-            <div class="col-xl-8 col-lg-8 col-md-10">
-                <div class="h1-testimonial-active dot-style">
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial text-center">
-                        <!-- Testimonial Content -->
-                        <div class="testimonial-caption ">
-                            <!-- founder -->
-                            <div class="testimonial-founder  ">
-                                <div class="founder-img mb-30">
-                                    <img src="@Url.Content("~/Theme/assets/img/testmonial/testimonial-founder.png")" alt="">
-                                    <span>Margaret Lawson</span>
-                                    <p>Creative Director</p>
+                    <div id="tabs-2">
+                        <form action="javascript:;" class="form1">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4">
+                                    <div class="select1_wrapper">
+                                        <label>City or Hotel Name:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">Enter a destination or hotel name</option>
+                                                <option value="2">Lorem ipsum dolor sit amet</option>
+                                                <option value="3">Duis autem vel eum</option>
+                                                <option value="4">Ut wisi enim ad minim veniam</option>
+                                                <option value="5">Nam liber tempor cum</option>
+                                                <option value="6">At vero eos et accusam et</option>
+                                                <option value="7">Consetetur sadipscing elitr</option>
+                                                <option value="8">Sed diam nonumy</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>Check-In:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="Mm/Dd/Yy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>Check-Out:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="Mm/Dd/Yy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>Adult:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">Room  for  1  adult</option>
+                                                <option value="2">Room  for  2  adult</option>
+                                                <option value="3">Room  for  3  adult</option>
+                                                <option value="4">Room  for  4  adult</option>
+                                                <option value="5">Room  for  5  adult</option>
+                                                <option value="6">Room  for  6  adult</option>
+                                                <option value="7">Room  for  7  adult</option>
+                                                <option value="8">Room  for  8  adult</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="button1_wrapper">
+                                        <button type="submit" class="btn-default btn-form1-submit">Search</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="testimonial-top-cap">
-                                <p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>
-                            </div>
-                        </div>
+                        </form>
                     </div>
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial text-center">
-                        <!-- Testimonial Content -->
-                        <div class="testimonial-caption ">
-                            <!-- founder -->
-                            <div class="testimonial-founder  ">
-                                <div class="founder-img mb-30">
-                                    <img src="@Url.Content("~/Theme/assets/img/testmonial/testimonial-founder.png")" alt="">
-                                    <span>Margaret Lawson</span>
-                                    <p>Creative Director</p>
+                    <div id="tabs-3">
+                        <form action="javascript:;" class="form1">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>Country:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">Please Select</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-top-cap">
-                                <p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial text-center">
-                        <!-- Testimonial Content -->
-                        <div class="testimonial-caption ">
-                            <!-- founder -->
-                            <div class="testimonial-founder  ">
-                                <div class="founder-img mb-30">
-                                    <img src="@Url.Content("~/Theme/assets/img/testmonial/testimonial-founder.png")" alt="">
-                                    <span>Margaret Lawson</span>
-                                    <p>Creative Director</p>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>City:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">Please Select</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-top-cap">
-                                <p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
-<!-- Support Company Start-->
-<div class="support-company-area support-padding fix">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6">
-                <div class="right-caption">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle section-tittle2">
-                        <span>What we are doing</span>
-                        <h2>24k Talented people are getting Jobs</h2>
-                    </div>
-                    <div class="support-caption">
-                        <p class="pera-top">
-                            AV Staffing Inc is a leading provider of top-notch personnel solutions for businesses of all sizes. With a strong focus on quality and efficiency, our team is dedicated to helping you achieve your goals and overcome any challenges that come your way. Our mission is to be a trusted and reliable partner that you can count on, no matter what.
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>Location:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">Please Select</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>Pick up Date:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="Mm/Dd/Yy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>Drop off Date:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="Mm/Dd/Yy">
+                                        </div>
+                                    </div>
+                                </div>
 
-                            </p>
+
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="button1_wrapper">
+                                        <button type="submit" class="btn-default btn-form1-submit">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="tabs-4">
+                        <form action="javascript:;" class="form1">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>Sail To:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">All destinations</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>Sail From:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">All ports</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>Start Date:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="From any month">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="input1_wrapper">
+                                        <label>End of Date:</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="input datepicker" value="To any month">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="select1_wrapper">
+                                        <label>Cruise Ship:</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="1">All Ships</option>
+                                                <option value="2">Alaska</option>
+                                                <option value="3">Bahamas</option>
+                                                <option value="4">Bermuda</option>
+                                                <option value="5">Canada</option>
+                                                <option value="6">Caribbean</option>
+                                                <option value="7">Europe</option>
+                                                <option value="8">Hawaii</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-4 col-md-2">
+                                    <div class="button1_wrapper">
+                                        <button type="submit" class="btn-default btn-form1-submit">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="why1">
+    <div class="container">
+
+        <h2 class="animated" data-animation="fadeInUp" data-animation-delay="100">WHY WE ARE THE BEST</h2>
+
+        <div class="title1 animated" data-animation="fadeInUp" data-animation-delay="200">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <br>tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+
+        <br><br>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="thumb2 animated" data-animation="flipInY" data-animation-delay="200">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure class="">
+                                <img src="Theme2/images/why1.png" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/why1_hover.png" alt="" class="img2 img-responsive">
+                            </figure>
+                            <div class="caption">
+                                <div class="txt1">Amazing Travel</div>
+                                <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</div>
+                                <div class="txt3">Read More</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="thumb2 animated" data-animation="flipInY" data-animation-delay="300">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure class="">
+                                <img src="Theme2/images/why2.png" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/why2_hover.png" alt="" class="img2 img-responsive">
+                            </figure>
+                            <div class="caption">
+                                <div class="txt1">Discover</div>
+                                <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</div>
+                                <div class="txt3">Read More</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="thumb2 animated" data-animation="flipInY" data-animation-delay="400">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure class="">
+                                <img src="Theme2/images/why3.png" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/why3_hover.png" alt="" class="img2 img-responsive">
+                            </figure>
+                            <div class="caption">
+                                <div class="txt1">Book Your Trip</div>
+                                <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</div>
+                                <div class="txt3">Read More</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="thumb2 animated" data-animation="flipInY" data-animation-delay="500">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure class="">
+                                <img src="Theme2/images/why4.png" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/why4_hover.png" alt="" class="img2 img-responsive">
+                            </figure>
+                            <div class="caption">
+                                <div class="txt1">Nice Support</div>
+                                <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</div>
+                                <div class="txt3">Read More</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="parallax1" class="parallax">
+    <div class="bg1 parallax-bg"></div>
+    <div class="overlay"></div>
+    <div class="parallax-content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-10 animated" data-animation="fadeInLeft" data-animation-delay="100">
+                    <div class="txt1">Caucasus Vacation Packages</div>
+                    <div class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</div>
+                    <div class="txt3">From: Khazbegi (Goergia) <strong>$159.00</strong><span>person</span></div>
+                </div>
+                <div class="col-sm-2 animated" data-animation="fadeInRight" data-animation-delay="200">
+                    <a href="#" class="btn-default btn0">Details</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="popular_cruises1">
+    <div class="container">
+
+        <h2 class="animated" data-animation="fadeInUp" data-animation-delay="100">POPULAR CRUISES</h2>
+
+        <div class="title1 animated" data-animation="fadeInUp" data-animation-delay="200">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <br>tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+
+        <br><br>
+
+        <div id="popular_wrapper" class="animated" data-animation="fadeIn" data-animation-delay="300">
+            <div id="popular_inner">
+                <div class="">
+                    <div id="popular">
+                        <div class="">
+                            <div class="carousel-box">
+                                <div class="inner">
+                                    <div class="carousel main">
+                                        <ul>
+                                            <li>
+                                                <div class="popular">
+                                                    <div class="popular_inner">
+                                                        <figure>
+                                                            <img src="Theme2/images/popular01.jpg" alt="" class="img-responsive">
+                                                            <div class="over">
+                                                                <div class="v1">Bahamas <span>17 Deal Offers</span></div>
+                                                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="txt1"><span>Bahamas</span> 7 Night Tour</div>
+                                                            <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
+                                                            <div class="txt3 clearfix">
+                                                                <div class="left_side">
+                                                                    <div class="stars1">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star2.png" alt="">
+                                                                    </div>
+                                                                    <div class="nums">- 18 Reviews</div>
+                                                                </div>
+                                                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="popular">
+                                                    <div class="popular_inner">
+                                                        <figure>
+                                                            <img src="Theme2/images/popular02.jpg" alt="" class="img-responsive">
+                                                            <div class="over">
+                                                                <div class="v1">Mediterranean <span>17 Deal Offers</span></div>
+                                                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="txt1"><span>Mediterranean</span> 18 Night Tour</div>
+                                                            <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
+                                                            <div class="txt3 clearfix">
+                                                                <div class="left_side">
+                                                                    <div class="stars1">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                    </div>
+                                                                    <div class="nums">- 168 Reviews</div>
+                                                                </div>
+                                                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="popular">
+                                                    <div class="popular_inner">
+                                                        <figure>
+                                                            <img src="Theme2/images/popular03.jpg" alt="" class="img-responsive">
+                                                            <div class="over">
+                                                                <div class="v1">Greece <span>17 Deal Offers</span></div>
+                                                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="txt1"><span>Greece</span> 6 Night Tour</div>
+                                                            <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
+                                                            <div class="txt3 clearfix">
+                                                                <div class="left_side">
+                                                                    <div class="stars1">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star2.png" alt="">
+                                                                    </div>
+                                                                    <div class="nums">- 16 Reviews</div>
+                                                                </div>
+                                                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="popular">
+                                                    <div class="popular_inner">
+                                                        <figure>
+                                                            <img src="Theme2/images/popular01.jpg" alt="" class="img-responsive">
+                                                            <div class="over">
+                                                                <div class="v1">Bahamas <span>17 Deal Offers</span></div>
+                                                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="txt1"><span>Bahamas</span> 7 Night Tour</div>
+                                                            <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
+                                                            <div class="txt3 clearfix">
+                                                                <div class="left_side">
+                                                                    <div class="stars1">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star2.png" alt="">
+                                                                    </div>
+                                                                    <div class="nums">- 18 Reviews</div>
+                                                                </div>
+                                                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="popular">
+                                                    <div class="popular_inner">
+                                                        <figure>
+                                                            <img src="Theme2/images/popular02.jpg" alt="" class="img-responsive">
+                                                            <div class="over">
+                                                                <div class="v1">Mediterranean <span>17 Deal Offers</span></div>
+                                                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="txt1"><span>Mediterranean</span> 18 Night Tour</div>
+                                                            <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
+                                                            <div class="txt3 clearfix">
+                                                                <div class="left_side">
+                                                                    <div class="stars1">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                    </div>
+                                                                    <div class="nums">- 168 Reviews</div>
+                                                                </div>
+                                                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="popular">
+                                                    <div class="popular_inner">
+                                                        <figure>
+                                                            <img src="Theme2/images/popular03.jpg" alt="" class="img-responsive">
+                                                            <div class="over">
+                                                                <div class="v1">Greece <span>17 Deal Offers</span></div>
+                                                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="txt1"><span>Greece</span> 6 Night Tour</div>
+                                                            <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
+                                                            <div class="txt3 clearfix">
+                                                                <div class="left_side">
+                                                                    <div class="stars1">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star1.png" alt="">
+                                                                        <img src="Theme2/images/star2.png" alt="">
+                                                                    </div>
+                                                                    <div class="nums">- 16 Reviews</div>
+                                                                </div>
+                                                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+
+
+
+
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular_pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="happy1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-md-push-6">
+                <div class="content">
+                    <div class="txt1 animated" data-animation="fadeIn" data-animation-delay="100">HAPPY CUSTOMERS</div>
+                    <div class="txt2 animated" data-animation="fadeIn" data-animation-delay="150">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, set amet. </div>
+                    <div class="txt3 animated" data-animation="fadeIn" data-animation-delay="200">
                         <p>
-                            Our services are designed to meet the needs of any business, and our professional approach ensures that you receive the best possible results. Whether you need temporary or permanent staff, we have the resources and expertise to help. Our rigorous screening process ensures that only the most qualified and.
-                            
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh oui-
+                            sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit dolore magna aliquam erat voutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit..
                         </p>
-                        <a href="@Url.Action("Contact", "Home")" class="btn post-btn">Post a job</a>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euisod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+                        </p>
                     </div>
+
+                    <div class="distance1 animated" data-animation="fadeInUp" data-animation-delay="0">
+                        <div class="txt">Flights</div>
+                        <div class="bg">
+                            <div class="animated-distance" data-num="94" data-duration="1300" data-animation-delay="0"><span></span></div>
+                        </div>
+                    </div>
+
+                    <div class="distance1 animated" data-animation="fadeInUp" data-animation-delay="100">
+                        <div class="txt">Hotels</div>
+                        <div class="bg">
+                            <div class="animated-distance" data-num="87" data-duration="1300" data-animation-delay="100"><span></span></div>
+                        </div>
+                    </div>
+
+                    <div class="distance1 animated" data-animation="fadeInUp" data-animation-delay="200">
+                        <div class="txt">Cars</div>
+                        <div class="bg">
+                            <div class="animated-distance" data-num="48" data-duration="1300" data-animation-delay="200"><span></span></div>
+                        </div>
+                    </div>
+
+                    <div class="distance1 animated" data-animation="fadeInUp" data-animation-delay="300">
+                        <div class="txt">Cruises</div>
+                        <div class="bg">
+                            <div class="animated-distance" data-num="51" data-duration="1300" data-animation-delay="300"><span></span></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-6">
-                <div class="support-location-img">
-                    <img src="@Url.Content("~/Theme/assets/img/service/support-img.jpg")" alt="">
-                    <div class="support-img-cap text-center">
-                        <p>Since</p>
-                        <span>1994</span>
-                    </div>
-                </div>
+            <div class="col-sm-12 col-md-6 col-md-pull-6 animated" data-animation="fadeInLeft" data-animation-delay="200">
+                <img src="Theme2/images/people.png" alt="" class="img1 img-responsive">
             </div>
         </div>
     </div>
 </div>
-<!-- Support Company End-->
-<!-- Blog Area Start -->
-<div class="home-blog-area blog-h-padding">
+
+<div id="partners">
     <div class="container">
-        <!-- Section Tittle -->
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle text-center">
-                    <span>Our latest blog</span>
-                    <h2>Our recent news</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6">
-                <div class="home-blog-single mb-30">
-                    <div class="blog-img-cap">
-                        <div class="blog-img">
-                            <img src="@Url.Content("~/Theme/assets/img/blog/home-blog1.jpg")" alt="">
-                            <!-- Blog date -->
-                            <div class="blog-date text-center">
-                                <span>24</span>
-                                <p>Now</p>
-                            </div>
-                        </div>
-                        <div class="blog-cap">
-                            <p>|   Properties</p>
-                            <h3><a href="#">AVStaffing in Time is perfect House in Toranto</a></h3>
-                            <a href="#" class="more-btn">Read more »</a>
-                        </div>
+            <div class="col-sm-4 col-md-2 col-xs-6">
+                <div class="thumb1 animated" data-animation="flipInX" data-animation-delay="100">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure>
+                                <img src="Theme2/images/partner1.jpg" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/partner1_hover.jpg" alt="" class="img2 img-responsive">
+                            </figure>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
-                <div class="home-blog-single mb-30">
-                    <div class="blog-img-cap">
-                        <div class="blog-img">
-                            <img src="@Url.Content("~/Theme/assets/img/blog/home-blog2.jpg")" alt="">
-                            <!-- Blog date -->
-                            <div class="blog-date text-center">
-                                <span>24</span>
-                                <p>Now</p>
-                            </div>
-                        </div>
-                        <div class="blog-cap">
-                            <p>|   Properties</p>
-                            <h3><a href="#">AVStaffing is offering more than 12k Jobs.</a></h3>
-                            <a href="#" class="more-btn">Read more »</a>
-                        </div>
+            <div class="col-sm-4 col-md-2 col-xs-6">
+                <div class="thumb1 animated" data-animation="flipInX" data-animation-delay="200">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure>
+                                <img src="Theme2/images/partner2.jpg" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/partner2_hover.jpg" alt="" class="img2 img-responsive">
+                            </figure>
+                        </a>
                     </div>
                 </div>
             </div>
+            <div class="col-sm-4 col-md-2 col-xs-6">
+                <div class="thumb1 animated" data-animation="flipInX" data-animation-delay="300">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure>
+                                <img src="Theme2/images/partner3.jpg" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/partner3_hover.jpg" alt="" class="img2 img-responsive">
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-xs-6">
+                <div class="thumb1 animated" data-animation="flipInX" data-animation-delay="400">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure>
+                                <img src="Theme2/images/partner4.jpg" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/partner4_hover.jpg" alt="" class="img2 img-responsive">
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-xs-6">
+                <div class="thumb1 animated" data-animation="flipInX" data-animation-delay="500">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure>
+                                <img src="Theme2/images/partner5.jpg" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/partner5_hover.jpg" alt="" class="img2 img-responsive">
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-xs-6">
+                <div class="thumb1 animated" data-animation="flipInX" data-animation-delay="600">
+                    <div class="thumbnail clearfix">
+                        <a href="#">
+                            <figure>
+                                <img src="Theme2/images/partner6.jpg" alt="" class="img1 img-responsive">
+                                <img src="Theme2/images/partner6_hover.jpg" alt="" class="img2 img-responsive">
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
-<!-- Blog Area End -->
-
-
-@section Scripts{
-
-    <script>
-        $("#owl-demo").owlCarousel({
-
-            navigation: true, // Show next and prev buttons
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-            items: 1,
-            dots: true
-            // "singleItem:true" is a shortcut for:
-            // items : 1,
-            // itemsDesktop : false,
-            // itemsDesktopSmall : false,
-            // itemsTablet: false,
-            // itemsMobile : false
-
-        });
-
-        $("#jobFormBtn").click(function () {
-            $("#jobForm").modal("show");
-        });
-
-    </script>
-}

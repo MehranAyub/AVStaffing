@@ -11,6 +11,9 @@ using AVStaffing.Models.ViewModels;
 using AVStaffing.LocalResource.Home.Contact;
 using static Humanizer.On;
 using AVStaffing.Models.Entities;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using System.Threading.Tasks;
 
 namespace AVStaffing.Controllers
 {
@@ -59,10 +62,18 @@ namespace AVStaffing.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public ActionResult Contact()
+        public async Task<ActionResult> Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            var apiKey = "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";
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("b-23276@student.usa.edu.pk", "MehranAyub");
+            var subject = "Sending with SendGrid is Fun";
+            var to = new EmailAddress("mehranayub3@gmail.com", "Example User");
+            var plainTextContent = "and easy to do anywhere, even with C#";
+            var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(msg);
             return View();
         }
         [AllowAnonymous]

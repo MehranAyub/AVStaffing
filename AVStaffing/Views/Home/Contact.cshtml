@@ -3,113 +3,102 @@
 @using AVStaffing.LocalResource.Home.Contact
 @{
     ViewBag.Title = "Contact";
-    Layout = "~/Views/Shared/_WebBaseLayout.cshtml";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
     var k = Session["CultureContent"].ToString();
     var homePageContent = LoadedPermissions.Portfolios.First(x => x.Key == Session["CultureContent"].ToString()).Value;
 }
-<!-- ================ contact section start ================= -->
-<section class="contact-section">
+<div id="google_map_wrapper"><div id="google_map"></div></div>
+
+<div class="breadcrumbs1_wrapper">
+    <div class="container">
+        <div class="breadcrumbs1"><a href="https://demo.gridgum.com/templates/Travel-agency/index.html">Home</a><span>/</span>Contacts</div>
+    </div>
+</div>
+
+
+<div id="content">
     <div class="container">
 
-
         <div class="row">
-            <div class="col-12">
-                <h2 class="contact-title">
-                    Let’s Talk
-                </h2>
-                <h4>If you’re curious about what we do or just want to get in touch with us, don’t hesitate to do it. Grab a coffee with us!</h4>
+            <div class="col-sm-6">
+
+                <h3>CONTACT INFO</h3>
+
+                <p>
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum
+                </p>
+
+                <br>
+
+                <h4>ADDRESS</h4>
+                <p>
+                    795 Fake Ave, Door 6<br>
+                    Wonderland, CA 94107, USA<br>
+                    <a href="#">info@yourdomain.com</a>
+                </p>
+
+                <h4>PHONE</h4>
+
+                <p>
+                    +440 875369208<br>
+                    +440 353363114
+                </p>
+
+                <div class="social3_wrapper">
+                    <ul class="social3 clearfix">
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                    </ul>
+                </div>
+
+
             </div>
-            <div class="col-lg-12">
-                <form class="form-contact contact_form" action="@Url.Action("Contact", "Home")" method="post" id="contactForm" novalidate="novalidate">
-                    <div class="row">
-                      
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <input class="form-control valid" name="Name" id="Name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                            </div>
+            <div class="col-sm-6">
+
+                <h3>CONTACT FORM</h3>
+
+                <div id="note"></div>
+                <div id="fields">
+                    <form id="ajax-contact-form" class="form-horizontal" action="javascript:alert('success!');">
+
+                        <div class="form-group">
+                            <label for="inputName">Your Name</label>
+                            <input type="text" class="form-control" id="inputName" name="name" value="Full Name" onBlur="if(this.value=='') this.value='Full Name'" onFocus="if(this.value =='Full Name' ) this.value=''">
                         </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <input class="form-control valid" name="Email" id="Email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                            </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="text" class="form-control" id="inputEmail" name="email" value="E-mail address" onBlur="if(this.value=='') this.value='E-mail address'" onFocus="if(this.value =='E-mail address' ) this.value=''">
                         </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <input class="form-control valid" name="Phone" id="Phone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter phone number'" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <input class="form-control valid" name="City" id="City" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter City'" placeholder="City">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <input class="form-control valid" name="Company" id="Company" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Company'" placeholder="Company">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-group">
-                                <label for="candidates">Enter how many candiates are required</label>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <select class="form-control" style="width:100%" name="Candidates" id="Candidates">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>10+</option>
-                                        </select>
-                                    </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="inputMessage">Your Message</label>
+                                    <textarea class="form-control" rows="7" id="inputMessage" name="content" onBlur="if(this.value=='') this.value='Message'"
+                                              onFocus="if(this.value =='Message' ) this.value=''">Message</textarea>
                                 </div>
-
-
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group mt-3">
-                        <button type="submit" class="button button-contactForm boxed-btn">Submit</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-3 offset-lg-1">
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="ti-home"></i></span>
-                    <div class="media-body">
-                        <h3>Toronto, On M9V 3Y7.</h3>
-                        <p>23 Westmore Dr. Unit # 215</p>
-                    </div>
+                        <button type="submit" class="btn-default btn-cf-submit">send message</button>
+                    </form>
                 </div>
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                    <div class="media-body">
-                        <h3>+1 416-300-4535</h3>
-                        <p>Mon to Fri 9am to 6pm</p>
-                    </div>
-                </div>
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="ti-email"></i></span>
-                    <div class="media-body">
-                        <h3>www.avstaffing.ca</h3>
-                        <p>Send us your query anytime!</p>
-                    </div>
-                </div>
+
+
             </div>
         </div>
+
+
+
+
+
+
+
+
     </div>
-</section>
-<!-- ================ contact section end ================= -->
-
-@section Scripts
-{
-
-    <script>
-        
-        </script>
-    }
+</div>
