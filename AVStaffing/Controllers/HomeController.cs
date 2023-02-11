@@ -65,7 +65,7 @@ namespace AVStaffing.Controllers
         public async Task<ActionResult> Contact()
         {
             ViewBag.Message = "Your contact page.";
-            var apiKey = "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";
+            var apiKey = Environment.GetEnvironmentVariable("SendGridApi");
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("b-23276@student.usa.edu.pk", "MehranAyub");
             var subject = "Sending with SendGrid is Fun";
